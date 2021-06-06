@@ -1,33 +1,13 @@
 <template>
   <v-container>
-    <v-row>
-      <v-col>
-        <Header />
-      </v-col>
-    </v-row>    
-    <v-row>
-      <v-col>
-        <router-view/>
-      </v-col>
-    </v-row>
-    <v-row>
-      <v-col>
-        <Footer />
-      </v-col>
-    </v-row>
+      <h1>UCSD Health</h1>
+      <h2>Doctors Referral</h2>
   </v-container>
 </template>
 <script>
-// @ is an alias to /src
-import Footer from '@/components/footer/index.vue'
-import Header from '@/components/header/index.vue'
 
 export default {
-  name: 'App',
-  components: {
-    Header,
-    Footer
-  }
+  name: 'Header'
 }
 </script>
 
