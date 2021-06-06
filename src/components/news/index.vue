@@ -18,7 +18,6 @@
       </template>
     </v-list>
   </v-card>
-  
 </template>
 
 <script>
@@ -47,3 +46,9 @@ export default {
   }
 }
 </script>
+<style lang="scss">
+.news {
+  background: rgba(0,30,61,0.75);
+  padding: 20px;
+}
+</style>

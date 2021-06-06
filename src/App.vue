@@ -1,16 +1,16 @@
 <template>
-  <v-app id="app">
-    <Header />
-    <v-content class="grow-4">
+  <v-app>
+    <v-content class="content sticky-footer">
       <v-container fill-height fluid>
+        <Header />
         <v-layout>
-          <v-flex shrink>
+          <v-flex>
             <router-view/>
           </v-flex>
         </v-layout>
       </v-container>
     </v-content>  
-    <v-footer class="shrink-4 pa-0" app>
+    <v-footer class="sticky pa-0" app>
       <Footer />
     </v-footer>
   </v-app>
@@ -34,26 +34,26 @@ export default {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: #fff;
-  background-image: linear-gradient(to bottom right, rgb(90, 0, 216),rgb(186, 0, 98));
-  .grow-4 {
-    flex-grow: 4;
-  }
-  .shrink-4 {
-    flex-shrink: 4;
-  }
-}
+  
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 
-#nav {
-  padding: 30px;
-  display:flex;
-  flex: 1 0 auto;
-  a {
-    font-weight: bold;
-    color: #2c3e50;
+  .v-application {
+    color: #fff;
+    background-image: linear-gradient(to bottom right, rgb(5, 35, 67),rgb(167, 23, 59));
   }
-  a.router-link-exact-active {
-    color: #42b983;
+
+  .sticky-footer {
+    padding-bottom: 50px;
+  }
+
+  .sticky {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0;
   }
 } 
 </style>
