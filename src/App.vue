@@ -4,9 +4,8 @@
       <v-container fill-height fluid>
         <Header />
         <v-layout>
-          <v-flex>
             <router-view/>
-          </v-flex>
+          
         </v-layout>
       </v-container>
     </v-content>  

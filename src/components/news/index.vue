@@ -6,15 +6,15 @@
 
     <v-list two-line>
       <template v-for="(article, index) in articles" :key="index" >
-      <v-list-item >
-        <v-list-item-content>
-          <v-list-item-subtitle>{{ article.date }}</v-list-item-subtitle>
-          <v-list-item-title class="text-h5">
-            {{ article.title }}
-          </v-list-item-title>
-        </v-list-item-content>
-      </v-list-item>
-      <v-divider />
+        <v-list-item class="news-item">
+          <v-list-item-content >
+            <v-list-item-subtitle class="news-item--subtitle">{{ article.date }}</v-list-item-subtitle>
+            <v-list-item-title class="news-item--title">
+              {{ article.title }}
+            </v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+        <hr />
       </template>
     </v-list>
   </v-card>
@@ -50,5 +50,19 @@ export default {
 .news {
   background: rgba(0,30,61,0.75);
   padding: 20px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  .news-item {
+    padding: 15px 0;
+    display:block;
+    .news-item--title{
+      font-size: 18px;
+      display: block;
+    }
+    .news-item--subtitle {
+      font-style: italic;
+    }
+  }
 }
 </style>
