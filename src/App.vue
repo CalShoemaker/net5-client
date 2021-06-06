@@ -1,21 +1,21 @@
 <template>
-  <v-container>
-    <v-row>
-      <v-col>
-        <Header />
-      </v-col>
-    </v-row>    
-    <v-row>
-      <v-col>
-        <router-view/>
-      </v-col>
-    </v-row>
-    <v-row>
-      <v-col>
-        <Footer />
-      </v-col>
-    </v-row>
-  </v-container>
+  <v-app id="app">
+    <v-content>
+    <v-container fill-height fluid>
+      <v-layout fill-height class="flex-column">
+        <v-flex>
+          <Header />
+        </v-flex>    
+        <v-flex>
+          <router-view/>
+        </v-flex>
+        <v-flex>
+          <Footer />
+        </v-flex>
+      </v-layout>
+    </v-container>
+    </v-content>
+  </v-app>
 </template>
 <script>
 // @ is an alias to /src
@@ -36,8 +36,8 @@ export default {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+  color: #fff;
+  background-image: linear-gradient(to bottom right, rgb(90, 0, 216),rgb(186, 0, 98));
 }
 
 #nav {
