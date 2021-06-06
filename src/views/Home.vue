@@ -1,17 +1,17 @@
 <template>
-  <div class="home">
-    <News />
+  <div>
+    <HelloWorld/>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import News from '@/components/news/index.vue'
+import HelloWorld from '../components/HelloWorld.vue';
 
 export default {
   name: 'Home',
+  
   components: {
-    News
-  }
-}
+    HelloWorld,
+  },
+};
 </script>
