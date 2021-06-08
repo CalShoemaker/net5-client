@@ -1,16 +1,35 @@
 <template>
     <v-content id="nav">
       <ul>
-        <li><router-link to="/"><v-icon>mdi-widgets</v-icon>Latest News</router-link></li>
-        <li><router-link to="/find-a-physician"><v-icon small>mdi-account</v-icon> Find a Physician</router-link></li>
-        <li><router-link to="/forms"><v-icon>mdi-folder-open</v-icon> Forms</router-link></li>
+        <li v-for="(link, index) in links" :key="index">
+          <router-link :to="link.to">
+            <v-icon>{{ link.icon }}</v-icon> {{ link.title }}
+          </router-link>
+        </li>
       </ul>
     </v-content>
 </template>
 
 <script>
 export default {
-  name: 'Footer'
+  name: 'Footer',
+  data() {
+    return {
+      links: [{
+        to: '/news',
+        title: 'Latest News',
+        icon: 'mdi-widgets'
+      },{
+        to: '/find-a-physician',
+        title: 'Find a Physician',
+        icon: 'mdi-account'
+      },{
+        to: '/forms',
+        title: 'Forms',
+        icon: 'mdi-folder-open'
+      }]
+    }
+  }
 }
 </script>
 
