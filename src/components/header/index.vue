@@ -14,7 +14,16 @@ export default {
 </script>
 <style lang="scss" scoped>
 header {
-     h2{
+    h1 {
+        font-size: 32px;
+        line-height: 24px;
+        font-weight: bolder;
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+     h2 {
+        margin-top: 0;
+        padding-top: 0;
         font-size: 19px;
         text-transform: uppercase;
      }

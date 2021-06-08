@@ -60,6 +60,10 @@ export default {
   width: 100%;
   .v-card-title {
     padding-left: 0;
+    span {
+      display: inline-block;
+      padding-left: 8px;
+    }
   }
   .news-item {
     padding: 15px 0;
