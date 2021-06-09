@@ -49,6 +49,7 @@ export default {
       allNews: false   
     }
   },
+  props: ['component'],
   mounted () {
     this.$store.dispatch('news/getAllNews')
   }

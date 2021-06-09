@@ -1,5 +1,17 @@
 <template>
-  <v-container class="about">
-    <v-card><h1>This is an about page</h1></v-card>
+  <v-container>
+    <FindPhysician />
   </v-container>
 </template>
+
+<script>
+// @ is an alias to /src
+import FindPhysician from '@/components/find-physician/index.vue'
+
+export default {
+  name: 'Home',
+  components: {
+    FindPhysician
+  }
+}
+</script>

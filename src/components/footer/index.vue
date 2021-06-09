@@ -16,6 +16,10 @@ export default {
   data() {
     return {
       links: [{
+        to: '/',
+        title: 'Home',
+        icon: 'mdi-home'
+      },{
         to: '/news',
         title: 'Latest News',
         icon: 'mdi-widgets'
